@@ -3,7 +3,7 @@ import numpy as np
 
 #TF-abbreviations
 def remove_nan(x, value=0.0):
-    return tf.where(tf.is_nan(x), value * tf.ones_like(x), x)
+    return tf.where(tf.math.is_nan(x), value * tf.ones_like(x), x)
 
 def dot(x,y):
     return tf.reduce_sum(x*y, axis=-1, keepdims=True)
